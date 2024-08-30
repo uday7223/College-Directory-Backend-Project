@@ -1,0 +1,74 @@
+Designing End Points : 
+----------------------
+
+1) /user/login                                   --> PostMapping --> @RequestBody UserAuth {username: usydgvf, password:123}
+
+
+
+Student entity endpoints :
+--------------------------
+
+2) /user/{id}                                    --> GetMapping --> @PathVariable int id 
+
+3)/users/name/{name}                             --> GetMapping --> @PathVariable String name
+
+4) Pending 
+
+5) /users					--> PostMapping --> @RequestBody User {name : abc, email:abc@gmail.com......}
+
+6) /users					--> PutMapping --> @RequestBody User {name : abc, email:abc@gmail.com......}
+
+7) /users/{id}					--> DeleteMapping --> @PathVariable int id 
+
+8) /users					--> GetMapping  -->
+
+
+
+
+
+Faculty Entity Endpoints :
+--------------------------
+
+5) /faculties/courses/{id} --> GM --> @PathVariable int id 
+
+6) /faculties  --> PutMapping @RequestBody User {id:101, name:abc .......}
+
+
+Admin Entity Endpoints :
+--------------------------
+
+5) /admins/courses/{id} --> GM --> @PathVariable int id 
+
+6) /faculties  --> PutMapping @RequestBody User {id:101, name:abc .......}
+
+
+STUDENT ENTITY :
+---------------
+
+POST MAPPING JSON OBJECT: 
+{
+    "id": 1,
+    "user": {
+        "id": 1,
+        "username": "john_doe",
+        "password": "password123",
+        "role": "STUDENT",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "1234567890"
+    },
+    "photo": "profile.jpg",
+    "department": {
+        "id": 1,
+        "name": "Computer Science",
+        "description": "The Computer Science department focuses on software development, algorithms, and data science.",
+        "students": []
+    },
+    "year": "2024"
+}
+
+
+
+
+
+
