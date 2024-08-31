@@ -23,8 +23,8 @@ public class Department {
     @Column
     private String description;
 
-    @OneToMany(mappedBy = "department")
-    private List<Student> students;
+//    @OneToMany(mappedBy = "department")
+//    private List<Student> students;
 
     // Getters and setters
 }
